@@ -1,0 +1,19 @@
+smtp:
+  build: .
+  ports:
+   - "25:25"
+  restart: always
+  environment:
+    GMAIL_USER: "gmail-app-user"
+    GMAIL_PASSWORD: "gmail-app-password"
+    # https://support.google.com/accounts/answer/185833
+    SES_USER:
+    SES_PASSWORD:
+    SES_REGION:
+    RELAY_NETWORKS: ":127.0.0.1:172.16.2.0/24:172.16.101.0/24:172.18.2.0/24:172.16.100.0/24"
+    RELAY_DOMAINS:
+    KEY_PATH:
+    CERTIFICATE_PATH:
+    MAILNAME:
+    DISABLE_IPV6: "yes"
+
